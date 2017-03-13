@@ -1,0 +1,27 @@
+<h1>Store</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @store.description %>
+</p>
+
+<h2>Locations</h2>
+<div id=location_new>
+  <%= button_to 'New location', new_store_location_path(@store), method: :get, remote: true %>
+</div>
+
+<div class="row">
+  <% @store.locations.each do |loc| %>
+    <div class="col-sm-4">
+      <%= render partial: 'locations/location', locals: {location: loc} %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>

@@ -1,0 +1,13 @@
+<%= form_for ([@store, @location || @store.locations.build]) do |l| %>
+  <p>
+    <%= l.label :position %>
+    <%= l.text_field :position %><br>
+
+    <%= l.label :description %>
+    <%= l.text_area :description %><br>
+
+    <%= l.submit %>
+    <%= l.button 'Cancel', { type: :reset } %>
+    <%= link_to 'Back', store_path(@store), id: "back_to_store" %>
+  </p>
+<% end %>

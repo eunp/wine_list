@@ -1,0 +1,14 @@
+  <p>
+    <strong>Name:</strong>
+    <%= store.name %><br>
+
+    <strong>Description:</strong>
+    <%= store.description %><br>
+
+    <%= link_to 'Show', store_path(store) %> |
+    <%= link_to 'Edit', edit_store_path(store) %> |
+    <%= link_to 'Destroy', store_path(store),
+                           method: :delete,
+                           data: { confirm: 'Are you sure?' } %>
+  </p>
+

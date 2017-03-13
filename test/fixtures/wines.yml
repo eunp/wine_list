@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  vineyard: MyString
+  region: MyString
+  category: Cab
+  year: 2001
+  price: 9.99
+  note: MyText
+  size: 750
+  location: one
+
+two:
+  name: MyString
+  vineyard: MyString
+  region: MyString
+  category: Pinot
+  year: 2002
+  price: 9.99
+  note: MyText
+  size: 750
+  location: two

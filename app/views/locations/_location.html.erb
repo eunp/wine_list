@@ -1,0 +1,15 @@
+<div id=location_<%= location.id %>>
+  <p>
+    <strong>Position:</strong>
+    <%= location.position %><br>
+
+    <strong>Description:</strong>
+    <%= location.description %><br>
+
+    <%= link_to 'Edit Location', edit_store_location_path(location.store, location),
+                           remote: true  %> |
+    <%= link_to 'Destroy Location', [location.store, location],
+                           method: :delete,
+                           data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>

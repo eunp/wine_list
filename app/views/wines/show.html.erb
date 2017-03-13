@@ -1,0 +1,53 @@
+<h1>Wine</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wine.name %>
+</p>
+
+<p>
+  <strong>Vineyard:</strong>
+  <%= @wine.vineyard %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @wine.region %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @wine.category %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @wine.year %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @wine.size %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @wine.price %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @wine.note %>
+</p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @wine.store.name if @wine.store %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @wine.location.position if @wine.location %>
+</p>
+<%= link_to 'Edit', edit_wine_path(@wine) %> |
+<%= link_to 'Back', wines_path %>

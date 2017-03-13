@@ -1,0 +1,43 @@
+<h1>Wines</h1>
+
+<%= button_to 'New wine', new_wine_path, method: :get %>
+<table>
+  <tr>
+    <th><%= sort_link "name" %></th>
+    <th><%= sort_link "vineyard" %></th>
+    <th><%= sort_link "region" %></th>
+    <th><%= sort_link "category" %></th>
+    <th><%= sort_link "year" %></th>
+    <th><%= sort_link "size" %></th>
+    <th><%= sort_link "price" %></th>
+    <th><%= sort_link "note" %></th>
+    <th><%= sort_link "store" %></th>
+    <th><%= sort_link "location" %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @wines.each do |w| %>
+    <tr>
+      <td><%= w.name %></td>
+      <td><%= w.vineyard %></td>
+      <td><%= w.region %></td>
+      <td><%= w.category %></td>
+      <td><%= w.year %></td>
+      <td><%= w.size %></td>
+      <td><%= w.price.to_s(:currency) %></td>
+      <td><%= w.note %></td>
+      <td><%= w.store.name if w.store %></td>
+      <td><%= w.location.position if w.location %></td>
+      <td><%= link_to 'Show', wine_path(w) %></td>
+      <td><%= link_to 'Edit', edit_wine_path(w) %></td>
+      <td><%= link_to 'Destroy', wine_path(w),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Home', root_path %> |
+<%= link_to 'Stores', stores_path %>

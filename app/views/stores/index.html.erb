@@ -1,0 +1,14 @@
+<h1>Stores</h1>
+
+<%= button_to 'New store', new_store_path, method: :get %>
+
+<div class="row">
+  <% @stores.each do |store| %>
+    <div class="col-sm-6">      
+      <%= render partial: 'store', locals: {store: store} %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Home', root_path %> |
+<%= link_to 'Wines', wines_path %>
