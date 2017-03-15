@@ -6,7 +6,7 @@ This application keeps track of your wine list. It does so by linking them to st
 
 ## Installation
 
-[Versions Used]
+### Versions Used
 
 Ruby 2.3.3p222
 
@@ -16,21 +16,21 @@ Gem 2.5.2
 
 SQLite 3.8.10.2
 
-First download top level directory 'wine_list'. The run [gem install bundler]. Next run [bundle install]. The application directory is now set up and you can run the following:
+First download top level directory 'wine_list'. Then run [gem install bundler], next run [bundle install]. The application directory is now set up and you can run the following:
 
-[Running test]
+### Running test
 
 bin/rails test
 
-[Setup assets]
+### Setup assets
 
 RAILS_ENV=production bin/rails assets:precompile
 
-[Reset DB]
+### Reset DB
 
 RAILS_ENV=production DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:reset
 
-[Running application]
+### Running application
 
 RAILS_ENV=production SECRET_KEY_BASE=\`bin/rake secret\` bin/rails server
 
